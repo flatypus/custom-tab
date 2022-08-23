@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Hinson's New Tab",
+  "description": "Subscribe to flatypus on YouTube at youtube.com/flatypus",
+  "version": "0.0.1",
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Open the popup"
+  },
+  "icons": {
+    "16": "favicon.ico",
+    "48": "favicon.ico",
+    "128": "favicon.ico"
+  },
+  "permissions": [
+  ],
+  "chrome_url_overrides":{"newtab":"index.html"}
+
+}
