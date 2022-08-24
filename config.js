@@ -2,6 +2,6 @@
 
 config = {
   name: "Hinson",
-  numberofimages: 1,
+  numberofimages: 8,
   title: "Zho Sun, Hinson"
 };
