@@ -4,6 +4,7 @@ config = {
   name: "Hinson",
   numberofimages: 10,
   title: "Zho Sun, Hinson",
+  minimal: false,
   search :{
     'youtube':'https://youtube.com',
     'docs':'https://docs.google.com',
