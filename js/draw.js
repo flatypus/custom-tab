@@ -16,18 +16,34 @@ if (!config.minimal) {
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.beginPath();
-    ctx.arc(mousex, mousey, 50, 0, 2 * Math.PI);
+    ctx.arc(mousex, mousey, 30, 0, 2 * Math.PI);
     ctx.stroke();
-    ctx.fillText(word, mousex + 40, mousey - 20);
+    ctx.fillText(word, mousex, mousey);
     if (word != "") {
-      let drawn = 0;
+      let drawn = [];
       search = word;
       for (i in config.search) {
         if (i.includes(word)) {
-          ctx.fillText(i, mousex + 40, mousey + 20 + 10 * drawn);
-          if (drawn == 0) search = config.search[i];
-          drawn += 1;
+          if (drawn.length == 0) search = config.search[i];
+          drawn.push(i);
         }
+      }
+      for (let i = 0; i < drawn.length; i++) {
+        ang = (i * 2 * Math.PI) / drawn.length;
+        ctx.fillText(
+          drawn[i],
+          mousex + Math.cos(ang) * 90,
+          mousey + Math.sin(ang) * 90
+        );
+        ctx.beginPath();
+        ctx.arc(
+          mousex + Math.cos(ang) * 90,
+          mousey + Math.sin(ang) * 90,
+          60,
+          0,
+          2 * Math.PI
+        );
+        ctx.stroke();
       }
     }
 
