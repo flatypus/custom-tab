@@ -9,25 +9,35 @@
   </head>
   <body id="background">
     <div
-      style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr))"
+      style="display: grid; grid-template-columns: repeat(1, minmax(0, 1fr))"
     >
-      <div
-        id="greeting"
-        style="grid-column: span 4 / span 4; color: white"
-      ></div>
-      <div
-        style="
-          grid-column: span 1 / span 1;
-          background-color: #00000069;
-          border-radius: 2vw;
-          padding: 32px;
-        "
-      >
-        <div id="time" style="font-size: 60px; color: rgb(99, 99, 99)"></div>
-        <div id="date" style="font-size: 20px; color: rgb(99, 99, 99)"></div>
+      <div style="grid-row-start: 1; grid-column-start: 1">
+        <canvas id="canvas"></canvas>
+      </div>
+      <div style="grid-row-start: 1; grid-column-start: 1">
+        <div style="display: flex; flex-direction: row-reverse">
+          <div
+            style="
+              flex-basis: auto;
+              background-color: #00000069;
+              border-radius: 2vw;
+              padding: 32px;
+            "
+          >
+            <div
+              id="time"
+              style="font-size: 60px; color: rgb(99, 99, 99)"
+            ></div>
+            <div
+              id="date"
+              style="font-size: 20px; color: rgb(99, 99, 99)"
+            ></div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
   <script src="./js/getimage.js"></script>
   <script src="./js/settext.js"></script>
+  <script src="./js/draw.js"></script>
 </html>
