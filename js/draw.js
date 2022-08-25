@@ -21,7 +21,7 @@ if (!config.minimal) {
     ctx.fillText(word, mousex, mousey);
     if (word != "") {
       let drawn = [];
-      search = word;
+      search = `https://google.com/search?q=${word}`;
       for (i in config.search) {
         if (i.includes(word)) {
           if (drawn.length == 0) search = config.search[i];
@@ -55,7 +55,7 @@ if (!config.minimal) {
     if (event.key == "Backspace" && word.length > 0) {
       word = word.slice(0, word.length - 1);
     } else if (event.key == "Enter" && search != "") {
-      console.log(search);
+      window.location.href = search
     } else if (event.key.length == 1) {
       word += event.key;
     }
