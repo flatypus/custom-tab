@@ -5,9 +5,45 @@ function gettime() {
 
 function getdate() {
   var d = new Date();
-  var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  return days[d.getDay()] + ", " + months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
+  var months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  var days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return (
+    days[d.getDay()] +
+    ", " +
+    months[d.getMonth()] +
+    " " +
+    d.getDate() +
+    ", " +
+    d.getFullYear()
+  );
+}
+
+function getQuote() {
+  return config.quote[Math.floor(Math.random() * config.quote.length)].replace(
+    "— ",
+    "\n— "
+  );
 }
 
 function settext(id, text) {
@@ -21,6 +57,7 @@ settext("title", config.title);
 settext("greeter", config.name);
 settext("time", gettime());
 settext("date", getdate());
+settext("quote", getQuote());
 
 setInterval(() => {
   settext("time", gettime());
