@@ -4,7 +4,7 @@
 <ol>
   <li>Configurable even for non-programmers through the config.js file</li>
   <li>Load custom images in /images, just name them in order and change <code>numberofimages</code> in config.js</li>
-  <li>Automatically grabs favicons from page when added to the link list, then caches them in local storage to speed up future loads</li>
+  <li>Automatically grabs favicons from page when added to the link list, then caches them in local storage to speed up future loads (if auto favicon is too low res, there is a custom favicon feature)</li>
 </ol>
 
 ![image](https://user-images.githubusercontent.com/68029599/186843653-51a34bc6-75ae-4442-baf1-1ec8622904b9.png)
