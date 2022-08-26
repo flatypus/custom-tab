@@ -5,11 +5,16 @@
   <li>Configurable even for non-programmers through the config.js file</li>
   <li>Load custom images in /images, just name them in order and change <code>numberofimages</code> in config.js</li>
   <li>Automatically grabs favicons from page when added to the link list, then caches them in local storage to speed up future loads (if auto favicon is too low res, there is a custom favicon feature)</li>
+  <li>Custom search bar for searching specific websites quickly</li>
 </ol>
 
-![image](https://user-images.githubusercontent.com/68029599/186843653-51a34bc6-75ae-4442-baf1-1ec8622904b9.png)
+| ![image](https://user-images.githubusercontent.com/68029599/186850372-d1cc3c89-0f95-4673-8dbb-bbab553e93cb.png) | 
+|:--:| 
+| *Beautiful dashboard of customizable tabs* |
 
-
+| ![image](https://user-images.githubusercontent.com/68029599/186850513-3f213ef9-29eb-4c5e-aae4-3aceeb8c17f0.png) | 
+|:--:| 
+| *Custom search feature* |
 
 ## How to use:
 First, download as zip and unpack, or run `git clone https://github.com/flatypus/newtab`. 
