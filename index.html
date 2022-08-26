@@ -7,32 +7,10 @@
     <script type="text/javascript" src="config.js"></script>
   </head>
   <body id="background">
-    <div
-      style="
-        display: flex;
-        flex-direction: row;
-        padding-left: 4vw;
-        padding-top: 4vh;
-        column-gap: 4vw;
-      "
-    >
+    <div id="bglayer">
       <div style="flex-basis: auto">
-        <div
-          style="
-            inline-size: 100%;
-            margin-bottom: 1vw;
-            display: flex;
-            flex-direction: row;
-          "
-        >
-          <div
-            style="
-              flex-basis: auto;
-              background-color: #0000004b;
-              padding: 32px;
-              border-radius: 2vw;
-            "
-          >
+        <div id="sideflexcontainer">
+          <div id="sideflexitem">
             <div
               id="time"
               style="font-size: 60px; color: rgb(131, 131, 131)"
@@ -48,14 +26,7 @@
           id="quotecontainer"
         >
           <!-- font-family: 'Dancing Script', cursive; -->
-          <div
-            style="
-              font-size: 40px;
-              color: rgb(131, 131, 131);
-              inline-size: 20vw;
-              overflow-wrap: break-word;
-            "
-          >
+          <div id="quotebox">
             <div
               id="quote"
               style="font-family: 'Amiri', serif; font-style: italic"
@@ -67,16 +38,7 @@
           </div>
         </div>
       </div>
-      <div
-        id="links"
-        style="
-          flex-basis: auto;
-          display: grid;
-          grid-template-columns: repeat(4, minmax(0, 1fr));
-          column-gap: 20px;
-          row-gap: 20px;
-        "
-      ></div>
+      <div id="links"></div>
     </div>
   </body>
   <script src="./js/configparse.js"></script>

@@ -5,6 +5,42 @@
   background-size: cover;
 }
 
+#bglayer {
+  display: flex;
+  flex-direction: row;
+  padding-left: 4vw;
+  padding-top: 4vh;
+  column-gap: 4vw;
+}
+
+#sideflexcontainer {
+  inline-size: 100%;
+  margin-bottom: 1vw;
+  display: flex;
+  flex-direction: row;
+}
+
+#sideflexitem {
+  flex-basis: auto;
+  background-color: #0000004b;
+  padding: 32px;
+  border-radius: 2vw;
+}
+
+#quotebox {
+  font-size: 40px;
+  color: rgb(131, 131, 131);
+  inline-size: 20vw;
+  overflow-wrap: break-word;
+}
+
+#links {
+  flex-basis: auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 20px;
+}
+
 .container {
   background-color: #ffffff34;
   border-radius: 1vw;
@@ -13,6 +49,8 @@
   transition: all 0.1s ease-in-out;
   filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
     drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+  margin-inline: 1vw;
+  margin-block-end: 4vh;
 }
 
 .container:hover {
