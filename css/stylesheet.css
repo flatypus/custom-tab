@@ -14,7 +14,6 @@
 
 #sideflexcontainer {
   inline-size: 100%;
-  margin-bottom: 1vw;
   display: flex;
   flex-direction: row;
 }
@@ -22,8 +21,17 @@
 #sideflexitem {
   flex-basis: auto;
   background-color: #0000004b;
-  padding: 32px;
+  padding-inline: 40px;
+  padding-block: 30px;
   border-radius: 2vw;
+}
+
+#quotecontainer {
+  background-color: #0000004b;
+  border-radius: 2vw;
+  padding-inline: 40px;
+  padding-block: 30px;
+  display: block;
 }
 
 #quotebox {
@@ -31,6 +39,7 @@
   color: rgb(131, 131, 131);
   inline-size: 25vw;
   overflow-wrap: break-word;
+  font-family: "Amiri", serif;
 }
 
 #links {
@@ -79,7 +88,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 1vw;
 }
 
 .imagecontainer {
@@ -140,4 +148,10 @@
   outline: none;
   font-size: 24px;
   color: rgb(138, 138, 138);
+}
+
+.searchform {
+  flex-basis: auto;
+  flex-grow: 1;
+  height: 100%;
 }
