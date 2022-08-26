@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&display=swap");
 #background {
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -11,10 +11,13 @@
   height: 170px;
   position: relative;
   transition: all 0.1s ease-in-out;
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
+    drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 }
 
 .container:hover {
   scale: 1.1;
+  background-color: #ffffff62;
 }
 
 .textnode {

@@ -12,6 +12,9 @@ config = {
     linkedin: "linkedin.com",
     instagram: "instagram.com",
     drive: "drive.google.com",
+    youtube: "youtube.com",
+    pixlr: "https://pixlr.com/x/",
+    geoguessr: "geoguessr.com",
   },
   quote: [
     ["Be the change you want to see in the world.", " — Mahatma Gandhi"],
