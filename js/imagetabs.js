@@ -10,6 +10,21 @@ function setuplocalstorage() {
   });
 }
 
+function imageSize(url) {
+  const img = new Image();
+  img.addEventListener("load", function () {
+    return this.naturalWidth * this.naturalHeigh;
+  });
+  img.src = url;
+}
+
+function largest(elems) {
+  e = [];
+  for (let i in elems) {
+    console.log(imageSize(elems[i].src));
+  }
+}
+
 async function geticon(elem, url) {
   storage = chrome.storage.local.get("urls", (result) => {
     if (result.urls[`${url}`] !== undefined) {
@@ -25,7 +40,7 @@ async function geticon(elem, url) {
         .then((response) => response.json())
         .then((data) => {
           if (data.icons.length > 0) {
-            console.log(data.icons);
+            console.log(data, largest(data.icons));
             storage = chrome.storage.local.get("urls", (result) => {
               result.urls[`${url}`] = data.icons[0].src;
               chrome.storage.local.set({ urls: result.urls });
@@ -49,24 +64,11 @@ for (var element in config.links) {
   // style container
   container.className = "container";
   container.href = "https://" + config.links[element];
-
   // style textbox
   textnode.innerText = element;
-  textnode.style.position = "absolute";
-  textnode.style.bottom = "0";
-  textnode.style.width = "100%";
-  textnode.style.fontSize = "1.5em";
-  textnode.style.backgroundColor = "#00000034";
-  textnode.style.borderRadius = "1vw";
-  textnode.style.textAlign = "center";
-  textnode.style.paddingBlock = "0.5vw";
-  textnode.style.textDecoration = "none";
-  textnode.style.color = "#e7e7e7d7";
+  textnode.className = "textnode";
   // style imagenode
-  imagenode.style.height = "100px";
-  imagenode.style.width = "100px";
-  imagenode.style.paddingInline = "30px";
-  imagenode.style.paddingBlockStart = "20px";
+  imagenode.className = "imagenode";
   geticon(imagenode, url);
   container.appendChild(imagenode);
   container.appendChild(textnode);

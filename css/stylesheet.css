@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&display=swap');
 #background {
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -16,4 +15,24 @@
 
 .container:hover {
   scale: 1.1;
+}
+
+.textnode {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 1.5em;
+  background-color: #00000034;
+  border-radius: 1vw;
+  text-align: center;
+  padding-block: 0.5vw;
+  text-decoration: none;
+  color: #e7e7e7d7;
+}
+
+.imagenode {
+  height: 100px;
+  width: 100px;
+  padding-inline: 30px;
+  padding-block-start: 20px;
 }

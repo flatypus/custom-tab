@@ -45,18 +45,26 @@
         </div>
         <div
           style="background-color: #0000004b; border-radius: 2vw; padding: 32px"
+          id="quotecontainer"
         >
+          <!-- font-family: 'Dancing Script', cursive; -->
           <div
-            id="quote"
             style="
               font-size: 40px;
               color: rgb(131, 131, 131);
-              font-family: 'Dancing Script', cursive;
               inline-size: 20vw;
               overflow-wrap: break-word;
-              white-space: pre-line;
             "
-          ></div>
+          >
+            <div
+              id="quote"
+              style="font-family: 'Amiri', serif; font-style: italic"
+            ></div>
+            <div
+              id="quoteauthor"
+              style="text-align: end; font-family: 'Amiri', serif"
+            ></div>
+          </div>
         </div>
       </div>
       <div
@@ -71,6 +79,7 @@
       ></div>
     </div>
   </body>
+  <script src="./js/configparse.js"></script>
   <script src="./js/getimage.js"></script>
   <script src="./js/settext.js"></script>
   <script src="./js/imagetabs.js"></script>
