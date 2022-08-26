@@ -2,6 +2,10 @@ function toBaseURL(fullURL) {
   return fullURL.replace(/(http(s)?:\/\/)|(\/.*){1}/g, "");
 }
 
+function removeHttps(url) {
+  return url.replace(/^https?:\/\//i, "");
+}
+
 function setuplocalstorage() {
   chrome.storage.local.get("urls", (result) => {
     if (result.urls === undefined) {
@@ -78,13 +82,14 @@ async function geticon(elem, url) {
 setuplocalstorage();
 var list = document.getElementById("links");
 for (var element in config.links) {
+  console.log(config.links[element]);
   url = toBaseURL(config.links[element]);
   var container = document.createElement("a");
   var textnode = document.createElement("div");
   var imagenode = document.createElement("img");
   // style container
   container.className = "container";
-  container.href = "https://" + url;
+  container.href = "https://" + removeHttps(config.links[element]);
   // style textbox
   textnode.innerText = element;
   textnode.className = "textnode";

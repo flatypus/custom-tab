@@ -8,7 +8,7 @@ config = {
     gmail: "mail.google.com",
     docs: "docs.google.com",
     crd: "remotedesktop.google.com",
-    github: "github.com/flatypus",
+    github: "https://github.com/flatypus",
     linkedin: "linkedin.com",
     instagram: "instagram.com",
     drive: "drive.google.com",
