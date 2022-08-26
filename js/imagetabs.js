@@ -77,6 +77,14 @@ async function geticon(elem, url) {
               geticon(elem, url);
               return;
             }
+          })
+          .catch((error) => {
+            if (error instanceof TypeError) {
+              setDefault(elem);
+            } else if (error instanceof SyntaxError) {
+              geticon(elem, url);
+              return;
+            }
           });
       }
     });
