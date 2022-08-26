@@ -95,7 +95,7 @@ for (var element in config.links) {
     geticon(imagenode, url);
   }
   imagecontainer.appendChild(imagenode);
-  container.appendChild(textnode);
   container.appendChild(imagecontainer);
+  container.appendChild(textnode);
   list.appendChild(container);
 }

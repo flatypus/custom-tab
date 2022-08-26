@@ -10,6 +10,7 @@
   flex-direction: row;
   padding-top: 6vh;
   column-gap: 4vw;
+  padding-inline: 4vw;
 }
 
 #sideflexcontainer {
@@ -59,8 +60,8 @@
 .container {
   background-color: #ffffff34;
   border-radius: 1vw;
-  height: 190px;
-  position: relative;
+  /* height: 190px; */
+  /* position: relative; */
   transition: all 0.1s ease-in-out;
   filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
     drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
@@ -72,7 +73,7 @@
 }
 
 .textnode {
-  position: absolute;
+  flex-basis: auto;
   bottom: 0;
   width: 100%;
   font-size: 1.5em;
@@ -86,15 +87,15 @@
 
 .imagenode {
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 
 .imagecontainer {
-  height: 120px;
-  width: 120px;
+  flex-basis: auto;
   padding-inline: 30px;
   padding-block-start: 20px;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 /* Dropdown Button */
