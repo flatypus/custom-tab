@@ -17,5 +17,6 @@
 ## How to use:
 First, download as zip and unpack, or run `git clone https://github.com/flatypus/newtab`. 
 This is meant to be a chrome extension, so open chrome extensions in developer mode, click load unpacked, and select this folder.
+Then, copy over the default .config.js file and edit it to suit your needs.
 
 Kinda inspired by [vincent's start page](https://github.com/vincor-qc/new-startpage) btw<br>
