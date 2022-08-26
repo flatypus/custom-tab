@@ -4,6 +4,11 @@ config = {
   name: "Hinson",
   numberofimages: 10,
   title: "Zho Sun, Hinson",
+  links: {
+    github: "github.com",
+    linkedin: "linkedin.com",
+    instagram: "instagram.com",
+  },
   quote: [
     "Be the change you want to see in the world. — Mahatma Gandhi",
     "When you have a dream, you've got to grab it and never let go. — Carol Burnett",
