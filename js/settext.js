@@ -104,18 +104,33 @@ settext("quote", getQuote());
 
 var list = document.getElementById("links");
 for (var key in config.links) {
-  var node = document.createElement("div");
+  var container = document.createElement("div");
   var textnode = document.createElement("div");
   var imagenode = document.createElement("img");
+  // style container
+  container.style.backgroundColor = "#ffffff34";
+  container.style.borderRadius = "1vw";
+  container.style.height = "170px";
+  container.style.position = "relative";
+  // style textbox
   textnode.innerText = key;
+  textnode.style.position = "absolute";
+  textnode.style.bottom = "0";
+  textnode.style.width = "100%";
   textnode.style.fontSize = "1.5em";
-  imagenode.style.height = "50px";
-  imagenode.style.width = "50px";
-  imagenode.style.borderRadius = "50%";
+  textnode.style.backgroundColor = "#00000034";
+  textnode.style.borderRadius = "1vw";
+  textnode.style.textAlign = "center";
+  textnode.style.paddingBlock = "0.5vw";
+  // style imagenode
+  imagenode.style.height = "100px";
+  imagenode.style.width = "100px";
+  imagenode.style.paddingInline = "30px";
+  imagenode.style.paddingBlockStart = "20px";
   geticon(imagenode, config.links[key]);
-  node.appendChild(imagenode);
-  node.appendChild(textnode);
-  list.appendChild(node);
+  container.appendChild(imagenode);
+  container.appendChild(textnode);
+  list.appendChild(container);
 }
 
 setInterval(() => {
