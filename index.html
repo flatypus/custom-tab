@@ -3,41 +3,46 @@
   <head>
     <title id="title"></title>
     <link rel="stylesheet" href="./css/stylesheet.css" />
-    <link rel="shortcut icon" href="./favicon.ico" />
     <meta charset="utf-8" />
     <script type="text/javascript" src="config.js"></script>
   </head>
   <body id="background">
-    <div
-      style="display: grid; grid-template-columns: repeat(1, minmax(0, 1fr))"
-    >
-      <div style="grid-row-start: 1; grid-column-start: 1">
-        <canvas id="canvas"></canvas>
-      </div>
-      <div style="grid-row-start: 1; grid-column-start: 1">
-        <div style="display: flex; flex-direction: row-reverse">
-          <div
-            style="
-              flex-basis: auto;
-              background-color: #00000069;
-              border-radius: 2vw;
-              padding: 32px;
-            "
-          >
+    <div id="bglayer">
+      <div style="flex-basis: auto">
+        <div id="sideflexcontainer">
+          <div id="sideflexitem">
             <div
               id="time"
-              style="font-size: 60px; color: rgb(99, 99, 99)"
+              style="font-size: 60px; color: rgb(131, 131, 131)"
             ></div>
             <div
               id="date"
-              style="font-size: 20px; color: rgb(99, 99, 99)"
+              style="font-size: 20px; color: rgb(131, 131, 131)"
+            ></div>
+          </div>
+        </div>
+        <div
+          style="background-color: #0000004b; border-radius: 2vw; padding: 32px"
+          id="quotecontainer"
+        >
+          <!-- font-family: 'Dancing Script', cursive; -->
+          <div id="quotebox">
+            <div
+              id="quote"
+              style="font-family: 'Amiri', serif; font-style: italic"
+            ></div>
+            <div
+              id="quoteauthor"
+              style="text-align: end; font-family: 'Amiri', serif"
             ></div>
           </div>
         </div>
       </div>
+      <div id="links"></div>
     </div>
   </body>
+  <script src="./js/configparse.js"></script>
   <script src="./js/getimage.js"></script>
   <script src="./js/settext.js"></script>
-  <script src="./js/draw.js"></script>
+  <script src="./js/imagetabs.js"></script>
 </html>

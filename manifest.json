@@ -8,6 +8,7 @@
     "48": "favicon.ico",
     "128": "favicon.ico"
   },
-  "permissions": [],
+  "permissions": ["tabs", "storage"],
+
   "chrome_url_overrides": { "newtab": "index.html" }
 }

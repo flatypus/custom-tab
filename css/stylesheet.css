@@ -1,5 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&display=swap");
 #background {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+}
+
+#bglayer {
+  display: flex;
+  flex-direction: row;
+  padding-left: 4vw;
+  padding-top: 4vh;
+  column-gap: 4vw;
+}
+
+#sideflexcontainer {
+  inline-size: 100%;
+  margin-bottom: 1vw;
+  display: flex;
+  flex-direction: row;
+}
+
+#sideflexitem {
+  flex-basis: auto;
+  background-color: #0000004b;
+  padding: 32px;
+  border-radius: 2vw;
+}
+
+#quotebox {
+  font-size: 40px;
+  color: rgb(131, 131, 131);
+  inline-size: 20vw;
+  overflow-wrap: break-word;
+}
+
+#links {
+  flex-basis: auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 20px;
+}
+
+.container {
+  background-color: #ffffff34;
+  border-radius: 1vw;
+  height: 170px;
+  position: relative;
+  transition: all 0.1s ease-in-out;
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
+    drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+  margin-inline: 1vw;
+  margin-block-end: 4vh;
+}
+
+.container:hover {
+  scale: 1.1;
+  background-color: #ffffff62;
+}
+
+.textnode {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 1.5em;
+  background-color: #00000034;
+  border-radius: 1vw;
+  text-align: center;
+  padding-block: 0.5vw;
+  text-decoration: none;
+  color: #e7e7e7d7;
+}
+
+.imagenode {
+  height: 100px;
+  width: 100px;
+  padding-inline: 30px;
+  padding-block-start: 20px;
 }

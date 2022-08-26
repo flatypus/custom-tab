@@ -39,6 +39,10 @@ function getdate() {
   );
 }
 
+function getQuote() {
+  return config.quote[Math.floor(Math.random() * config.quote.length)];
+}
+
 function settext(id, text) {
   var el = document.getElementById(id);
   if (el) {
@@ -50,6 +54,9 @@ settext("title", config.title);
 settext("greeter", config.name);
 settext("time", gettime());
 settext("date", getdate());
+quote = getQuote();
+settext("quote", quote[0]);
+settext("quoteauthor", quote[1]);
 
 setInterval(() => {
   settext("time", gettime());
