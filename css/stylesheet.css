@@ -5,3 +5,15 @@
   background-attachment: fixed;
   background-size: cover;
 }
+
+.container {
+  background-color: #ffffff34;
+  border-radius: 1vw;
+  height: 170px;
+  position: relative;
+  transition: all 0.1s ease-in-out;
+}
+
+.container:hover {
+  scale: 1.1;
+}

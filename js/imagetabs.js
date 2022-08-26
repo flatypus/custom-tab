@@ -25,6 +25,7 @@ async function geticon(elem, url) {
         .then((response) => response.json())
         .then((data) => {
           if (data.icons.length > 0) {
+            console.log(data.icons);
             storage = chrome.storage.local.get("urls", (result) => {
               result.urls[`${url}`] = data.icons[0].src;
               chrome.storage.local.set({ urls: result.urls });
@@ -34,7 +35,6 @@ async function geticon(elem, url) {
             return "";
           }
         });
-      console.log(chrome.storage.local.get("url"));
     }
   });
 }
@@ -47,11 +47,9 @@ for (var element in config.links) {
   var textnode = document.createElement("div");
   var imagenode = document.createElement("img");
   // style container
-  container.style.backgroundColor = "#ffffff34";
-  container.style.borderRadius = "1vw";
-  container.style.height = "170px";
-  container.style.position = "relative";
+  container.className = "container";
   container.href = "https://" + config.links[element];
+
   // style textbox
   textnode.innerText = element;
   textnode.style.position = "absolute";

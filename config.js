@@ -5,9 +5,13 @@ config = {
   numberofimages: 10,
   title: "Zho Sun, Hinson",
   links: {
-    github: "github.com",
+    gmail: "mail.google.com",
+    docs: "docs.google.com",
+    crd: "remotedesktop.google.com",
+    github: "github.com/flatypus",
     linkedin: "linkedin.com",
     instagram: "instagram.com",
+    drive: "drive.google.com",
   },
   quote: [
     "Be the change you want to see in the world. — Mahatma Gandhi",
