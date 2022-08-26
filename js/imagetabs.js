@@ -5,15 +5,6 @@ function toBaseURL(fullURL) {
 function removeHttps(url) {
   return url.replace(/^https?:\/\//i, "");
 }
-
-function setuplocalstorage() {
-  chrome.storage.local.get("urls", (result) => {
-    if (result.urls === undefined) {
-      chrome.storage.local.set({ urls: {} });
-    }
-  });
-}
-
 const getImageDimensions = (url) => {
   return new Promise((resolve, reject) => {
     const img = new Image();
@@ -23,68 +14,63 @@ const getImageDimensions = (url) => {
   });
 };
 
-function getLargest(arr) {
+async function getLargest(elem, url, icons) {
+  arr = await Promise.all(
+    icons.map((i) => {
+      return getImageDimensions(i.src);
+    })
+  );
   arr.sort((a, b) => (a[1] > b[1] ? 1 : -1));
-  return arr[arr.length - 1][0];
+  bestsrc = arr[arr.length - 1][0];
+  chrome.storage.local.set({ [url]: bestsrc });
+  elem.src = bestsrc;
 }
 
-function setDefault(elem) {
-  console.log("grabbing default because data.icons.length == 0");
+function setDefault(elem, url) {
+  // console.log("grabbing default because data.icons.length == 0");
   elem.src = "./js/customicons/default.png";
-  storage = chrome.storage.local.get("urls", async (result) => {
-    result.urls[`${url}`] = "./js/customicons/default.png";
-    chrome.storage.local.set({ urls: result.urls });
-  });
+  chrome.storage.local.set({ [url]: "./js/customicons/default.png" });
 }
 
-async function geticon(elem, url) {
+async function geticon(elem, url, www = 1) {
   try {
-    storage = chrome.storage.local.get("urls", (result) => {
-      if (result.urls[`${url}`] !== undefined) {
-        elem.src = result.urls[`${url}`];
+    storage = chrome.storage.local.get([url], (result) => {
+      if (result[url] !== undefined) {
+        // console.log(result);
+        elem.src = result[url];
       } else {
-        fetch(`http://favicongrabber.com/api/grab/` + url, {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-        })
+        fetch(
+          `https://favicongrabber.com/api/grab/` +
+            (www == 2 ? "www." : "") +
+            url,
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+          }
+        )
           .then((response) => {
-            return response.json();
+            if (response.status == 422) {
+              setDefault(elem, url);
+            } else if (response.status == 500) {
+              if (www == 2) {
+                setDefault(elem, url);
+              } else {
+                geticon(elem, url, (www = 2));
+              }
+            } else {
+              return response.json();
+            }
           })
           .then((data) => {
-            try {
-              if (data.icons.length > 0) {
-                storage = chrome.storage.local.get("urls", async (result) => {
-                  res = await Promise.all(
-                    data.icons.map((i) => {
-                      return getImageDimensions(i.src);
-                    })
-                  );
-                  bestsrc = getLargest(res);
-                  result.urls[`${url}`] = bestsrc;
-                  chrome.storage.local.set({ urls: result.urls });
-                  elem.src = bestsrc;
-                });
-              } else {
-                // setDefault(elem);
-                geticon(elem, url);
-                return;
-              }
-            } catch {
-              // setDefault(elem);
-              geticon(elem, url);
-              return;
+            if (data.icons.length > 0) {
+              getLargest(elem, url, data.icons);
             }
           })
           .catch((error) => {
-            if (error instanceof TypeError) {
-              setDefault(elem);
-            } else if (error instanceof SyntaxError) {
-              geticon(elem, url);
-              return;
-            }
+            console.log(error);
           });
       }
     });
@@ -95,7 +81,6 @@ async function geticon(elem, url) {
   }
 }
 
-setuplocalstorage();
 var list = document.getElementById("links");
 links.style.gridTemplateColumns = `repeat(${config.iconsPerRow}, minmax(0, 1fr))`;
 for (var element in config.links) {
