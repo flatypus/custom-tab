@@ -28,46 +28,59 @@ function getLargest(arr) {
   return arr[arr.length - 1][0];
 }
 
-async function geticon(elem, url) {
-  storage = chrome.storage.local.get("urls", (result) => {
-    if (result.urls[`${url}`] !== undefined) {
-      elem.src = result.urls[`${url}`];
-    } else {
-      fetch(`http://favicongrabber.com/api/grab/` + url, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          try {
-            if (data.icons.length > 0) {
-              storage = chrome.storage.local.get("urls", async (result) => {
-                res = await Promise.all(
-                  data.icons.map((i) => {
-                    return getImageDimensions(i.src);
-                  })
-                );
-                bestsrc = getLargest(res);
-                result.urls[`${url}`] = bestsrc;
-                chrome.storage.local.set({ urls: result.urls });
-                elem.src = bestsrc;
-              });
-            } else {
-              return "";
-            }
-          } catch {
-            elem.src = "./js/customicons/default.png";
-            storage = chrome.storage.local.get("urls", async (result) => {
-              result.urls[`${url}`] = "./js/customicons/default.png";
-              chrome.storage.local.set({ urls: result.urls });
-            });
-          }
-        });
-    }
+function setDefault(elem) {
+  console.log("grabbing default because data.icons.length == 0");
+  elem.src = "./js/customicons/default.png";
+  storage = chrome.storage.local.get("urls", async (result) => {
+    result.urls[`${url}`] = "./js/customicons/default.png";
+    chrome.storage.local.set({ urls: result.urls });
   });
+}
+
+async function geticon(elem, url) {
+  try {
+    storage = chrome.storage.local.get("urls", (result) => {
+      if (result.urls[`${url}`] !== undefined) {
+        elem.src = result.urls[`${url}`];
+      } else {
+        fetch(`http://favicongrabber.com/api/grab/` + url, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+            try {
+              if (data.icons.length > 0) {
+                storage = chrome.storage.local.get("urls", async (result) => {
+                  res = await Promise.all(
+                    data.icons.map((i) => {
+                      return getImageDimensions(i.src);
+                    })
+                  );
+                  bestsrc = getLargest(res);
+                  result.urls[`${url}`] = bestsrc;
+                  chrome.storage.local.set({ urls: result.urls });
+                  elem.src = bestsrc;
+                });
+              } else {
+                setDefault(elem);
+              }
+            } catch {
+              setDefault(elem);
+            }
+          });
+      }
+    });
+  } catch {
+    console.log("error");
+    geticon(elem, url);
+    return;
+  }
 }
 
 setuplocalstorage();
