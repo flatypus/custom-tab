@@ -68,10 +68,14 @@ async function geticon(elem, url) {
                   elem.src = bestsrc;
                 });
               } else {
-                setDefault(elem);
+                // setDefault(elem);
+                geticon(elem, url);
+                return;
               }
             } catch {
-              setDefault(elem);
+              // setDefault(elem);
+              geticon(elem, url);
+              return;
             }
           });
       }
