@@ -11,7 +11,7 @@
 | ![image](https://user-images.githubusercontent.com/68029599/186850372-d1cc3c89-0f95-4673-8dbb-bbab553e93cb.png) | 
 |:--:| 
 | *Beautiful dashboard of customizable tabs* |
-| ![image](https://user-images.githubusercontent.com/68029599/186854395-9ab421a3-b05e-454a-938b-ae1be135afe0.png) | 
+| ![image](https://user-images.githubusercontent.com/68029599/186854651-815e20c7-1945-4c00-a799-5854348fed6b.png) | 
 |:--:| 
 | *Custom search feature* |
 
