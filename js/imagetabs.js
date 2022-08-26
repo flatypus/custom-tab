@@ -25,7 +25,6 @@ const getImageDimensions = (url) => {
 
 function getLargest(arr) {
   arr.sort((a, b) => (a[1] > b[1] ? 1 : -1));
-  console.log(arr);
   return arr[arr.length - 1][0];
 }
 
@@ -60,7 +59,11 @@ async function geticon(elem, url) {
               return "";
             }
           } catch {
-            elem.src = data.icons[0].src;
+            elem.src = "./js/customicons/default.png";
+            storage = chrome.storage.local.get("urls", async (result) => {
+              result.urls[`${url}`] = "./js/customicons/default.png";
+              chrome.storage.local.set({ urls: result.urls });
+            });
           }
         });
     }

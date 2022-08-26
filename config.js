@@ -1,9 +1,16 @@
 // all the variables can and should be changed to fit the user
 
 config = {
+  // change this to the number of images in /images, otherwise random image generator will fail
   numberOfImages: 10,
-  iconsPerRow: 4,
+
+  // how many links to show per row
+  iconsPerRow: 5,
+
+  // title in the top tab
   title: "Zho Sun, Hinson",
+
+  // links to websites to be shown in tabs
   links: {
     gmail: "mail.google.com",
     docs: "docs.google.com",
@@ -17,6 +24,9 @@ config = {
     geoguessr: "geoguessr.com",
     twitch: "twitch.tv",
     studio: "studio.youtube.com",
+    localhost: "localhost:3000",
+    wikipedia: "wikipedia.org",
+    work: "https://trello.com/",
   },
 
   // if you don't want quotes, just delete the entire quote section
@@ -47,12 +57,15 @@ config = {
       " — Walt Whitman",
     ],
   ],
+
+  // list of search engines to be chosen from
   customsearch: {
     YouTube: "https://www.youtube.com/results",
     Google: "https://www.google.com/search",
     StackOverflow: "https://stackoverflow.com/search",
   },
 
+  // icon override for when favicon picker fails to find a high res icon
   customicons: {
     docs: "./js/customicons/docs.png",
     drive: "./js/customicons/drive.png",
