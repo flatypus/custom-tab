@@ -12,7 +12,6 @@
 |:--:| 
 | *Beautiful dashboard of customizable tabs* |
 | ![image](https://user-images.githubusercontent.com/68029599/186854651-815e20c7-1945-4c00-a799-5854348fed6b.png) | 
-|:--:| 
 | *Custom search feature* |
 
 ## How to use:
