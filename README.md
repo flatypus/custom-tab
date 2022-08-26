@@ -8,11 +8,13 @@
   <li>Custom search bar for searching specific websites quickly</li>
 </ol>
 
-![image](https://user-images.githubusercontent.com/68029599/186850372-d1cc3c89-0f95-4673-8dbb-bbab553e93cb.png)
-*Beautiful dashboard of customizable tabs*
+| ![image](https://user-images.githubusercontent.com/68029599/186850372-d1cc3c89-0f95-4673-8dbb-bbab553e93cb.png) | 
+|:--:| 
+| *Beautiful dashboard of customizable tabs* |
 
-![image](https://user-images.githubusercontent.com/68029599/186850513-3f213ef9-29eb-4c5e-aae4-3aceeb8c17f0.png)
-*Custom search feature*
+| ![image](https://user-images.githubusercontent.com/68029599/186850513-3f213ef9-29eb-4c5e-aae4-3aceeb8c17f0.png) | 
+|:--:| 
+| *Custom search feature* |
 
 ## How to use:
 First, download as zip and unpack, or run `git clone https://github.com/flatypus/newtab`. 
