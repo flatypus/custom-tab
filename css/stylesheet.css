@@ -149,9 +149,3 @@
   font-size: 24px;
   color: rgb(138, 138, 138);
 }
-
-.searchform {
-  flex-basis: auto;
-  flex-grow: 1;
-  height: 100%;
-}
