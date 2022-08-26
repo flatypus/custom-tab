@@ -7,65 +7,63 @@
     <script type="text/javascript" src="config.js"></script>
   </head>
   <body id="background">
-    <div id="bglayer">
-      <div style="flex-basis: auto">
-        <div id="sideflexcontainer">
-          <div id="sideflexitem">
-            <div
-              id="time"
-              style="font-size: 60px; color: rgb(131, 131, 131)"
-            ></div>
-            <div
-              id="date"
-              style="font-size: 20px; color: rgb(131, 131, 131)"
-            ></div>
+    <div style="display: grid; place-items: center">
+      <div id="bglayer">
+        <div style="flex-basis: auto">
+          <div id="sideflexcontainer">
+            <div id="sideflexitem">
+              <div
+                id="time"
+                style="font-size: 60px; color: rgb(131, 131, 131)"
+              ></div>
+              <div
+                id="date"
+                style="font-size: 20px; color: rgb(131, 131, 131)"
+              ></div>
+            </div>
+          </div>
+          <div
+            style="
+              background-color: #0000004b;
+              border-radius: 2vw;
+              padding: 32px;
+              display: block;
+            "
+            id="quotecontainer"
+          >
+            <!-- font-family: 'Dancing Script', cursive; -->
+            <div id="quotebox">
+              <div
+                id="quote"
+                style="font-family: 'Amiri', serif; font-style: italic"
+              ></div>
+              <div
+                id="quoteauthor"
+                style="text-align: end; font-family: 'Amiri', serif"
+              ></div>
+            </div>
           </div>
         </div>
-        <div
-          style="background-color: #0000004b; border-radius: 2vw; padding: 32px"
-          id="quotecontainer"
-        >
-          <!-- font-family: 'Dancing Script', cursive; -->
-          <div id="quotebox">
-            <div
-              id="quote"
-              style="font-family: 'Amiri', serif; font-style: italic"
-            ></div>
-            <div
-              id="quoteauthor"
-              style="text-align: end; font-family: 'Amiri', serif"
-            ></div>
+        <div>
+          <div id="customsearch">
+            <div class="dropdown">
+              <button class="dropbtn"></button>
+              <div class="dropdown-content"></div>
+            </div>
+            <form
+              id="searchForm"
+              style="flex-basis: auto; flex-grow: 1; height: 100%"
+            ></form>
           </div>
+          <div style="margin-top: 40px"></div>
+          <div id="links"></div>
         </div>
-      </div>
-      <div>
-        <div
-          id="customsearch"
-          style="
-            background-color: #0000004b;
-            border-radius: 2vw;
-            padding: 32px;
-            display: flex;
-            flex-direction: row;
-          "
-        >
-          <div class="dropdown">
-            <button class="dropbtn"></button>
-            <div class="dropdown-content"></div>
-          </div>
-          <form
-            id="searchForm"
-            style="flex-basis: auto; flex-grow: 1; height: 100%"
-          ></form>
-        </div>
-        <div style="margin-top: 40px"></div>
-        <div id="links"></div>
       </div>
     </div>
   </body>
-  <script src="./js/configparse.js"></script>
   <script src="./js/getimage.js"></script>
   <script src="./js/settext.js"></script>
   <script src="./js/imagetabs.js"></script>
   <script src="./js/customsearch.js"></script>
+  <script src="./js/configparse.js"></script>
 </html>

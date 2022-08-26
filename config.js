@@ -1,8 +1,8 @@
 // all the variables can and should be changed to fit the user
 
 config = {
-  name: "Hinson",
-  numberofimages: 10,
+  numberOfImages: 10,
+  iconsPerRow: 4,
   title: "Zho Sun, Hinson",
   links: {
     gmail: "mail.google.com",
@@ -18,6 +18,8 @@ config = {
     twitch: "twitch.tv",
     studio: "studio.youtube.com",
   },
+
+  // if you don't want quotes, just delete the entire quote section
   quote: [
     ["Be the change you want to see in the world.", " — Mahatma Gandhi"],
     [
@@ -49,5 +51,13 @@ config = {
     YouTube: "https://www.youtube.com/results",
     Google: "https://www.google.com/search",
     StackOverflow: "https://stackoverflow.com/search",
+  },
+
+  customicons: {
+    docs: "./js/customicons/docs.png",
+    drive: "./js/customicons/drive.png",
+    youtube: "./js/customicons/youtube.png",
+    twitch: "./js/customicons/twitch.png",
+    studio: "./js/customicons/studio.png",
   },
 };

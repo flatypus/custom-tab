@@ -1,3 +1,3 @@
-if (config.quote.length == 0 || config.quote == undefined) {
+if (config.quote == undefined || config.quote.length == 0) {
   document.getElementById("quotecontainer").style.display = "none";
 }
