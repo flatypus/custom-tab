@@ -15,6 +15,8 @@ config = {
     youtube: "youtube.com",
     pixlr: "https://pixlr.com/x/",
     geoguessr: "geoguessr.com",
+    twitch: "twitch.tv",
+    studio: "studio.youtube.com",
   },
   quote: [
     ["Be the change you want to see in the world.", " — Mahatma Gandhi"],
@@ -43,4 +45,9 @@ config = {
       " — Walt Whitman",
     ],
   ],
+  customsearch: {
+    YouTube: "https://www.youtube.com/results",
+    Google: "https://www.google.com/search",
+    StackOverflow: "https://stackoverflow.com/search",
+  },
 };

@@ -38,11 +38,34 @@
           </div>
         </div>
       </div>
-      <div id="links"></div>
+      <div>
+        <div
+          id="customsearch"
+          style="
+            background-color: #0000004b;
+            border-radius: 2vw;
+            padding: 32px;
+            display: flex;
+            flex-direction: row;
+          "
+        >
+          <div class="dropdown">
+            <button class="dropbtn"></button>
+            <div class="dropdown-content"></div>
+          </div>
+          <form
+            id="searchForm"
+            style="flex-basis: auto; flex-grow: 1; height: 100%"
+          ></form>
+        </div>
+        <div style="margin-top: 40px"></div>
+        <div id="links"></div>
+      </div>
     </div>
   </body>
   <script src="./js/configparse.js"></script>
   <script src="./js/getimage.js"></script>
   <script src="./js/settext.js"></script>
   <script src="./js/imagetabs.js"></script>
+  <script src="./js/customsearch.js"></script>
 </html>

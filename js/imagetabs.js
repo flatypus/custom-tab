@@ -40,6 +40,12 @@ async function geticon(elem, url) {
     case "drive.google.com":
       elem.src = "./js/customicons/drive.png";
       break;
+    case "studio.youtube.com":
+      elem.src = "./js/customicons/studio.png";
+      break;
+    case "twitch.tv":
+      elem.src = "./js/customicons/twitch.png";
+      break;
     default:
       storage = chrome.storage.local.get("urls", (result) => {
         if (result.urls[`${url}`] !== undefined) {
@@ -86,6 +92,7 @@ for (var element in config.links) {
   url = toBaseURL(config.links[element]);
   var container = document.createElement("a");
   var textnode = document.createElement("div");
+  var imagecontainer = document.createElement("div");
   var imagenode = document.createElement("img");
   // style container
   container.className = "container";
@@ -95,8 +102,11 @@ for (var element in config.links) {
   textnode.className = "textnode";
   // style imagenode
   imagenode.className = "imagenode";
+  // style imagecontainer
+  imagecontainer.className = "imagecontainer";
   geticon(imagenode, url);
-  container.appendChild(imagenode);
+  imagecontainer.appendChild(imagenode);
   container.appendChild(textnode);
+  container.appendChild(imagecontainer);
   list.appendChild(container);
 }
