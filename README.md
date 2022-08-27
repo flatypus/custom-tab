@@ -8,7 +8,7 @@ This is meant to be a chrome extension, so open the extensions page on your brow
 ## Features
 <ol>
   <li>Configurable even for non-programmers through the config.js file</li>
-  <li>Load custom images in /images, just name them in order and change <code>numberofimages</code> in config.js</li>
+  <li>Load custom <code>.png</code> images in /images (the code specifies png, so pls convert or rename sry), name the files in order (ie. 1.png, 2.png, etc), and change <code>numberofimages</code> in config.js</li>
   <li>Automatically grabs favicons from page when added to the link list, then caches them in local storage to speed up future loads (if auto favicon is too low res, there is a custom favicon feature)</li>
   <li>Custom search bar for searching specific websites quickly</li>
 </ol>
