@@ -57,11 +57,13 @@ config = {
   },
 
   // icon override for when favicon picker fails to find a high res icon
+  // to add a custom icon, choose one of the names from your 'links' list,
+  // and add the path to the image in the list below, as shown.
   customicons: {
-    docs: "./js/customicons/docs.png",
-    drive: "./js/customicons/drive.png",
-    youtube: "./js/customicons/youtube.png",
-    twitch: "./js/customicons/twitch.png",
-    studio: "./js/customicons/studio.png",
+    docs: "./customicons/docs.png",
+    drive: "./customicons/drive.png",
+    youtube: "./customicons/youtube.png",
+    twitch: "./customicons/twitch.png",
+    studio: "./customicons/studio.png",
   },
 };
