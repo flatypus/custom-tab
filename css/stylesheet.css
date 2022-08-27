@@ -73,30 +73,30 @@
 }
 
 .textnode {
+  position: absolute;
   flex-basis: auto;
   bottom: 0;
   width: 100%;
-  font-size: 1.5em;
+  font-size: 1vmax;
   background-color: #00000034;
   border-radius: 1vw;
   text-align: center;
-  padding-block: 0.5vw;
   text-decoration: none;
   color: #e7e7e7d7;
+  padding-block:0.3vmax;
 }
 
 .imagenode {
-  width: 12vmin;
-  height: 5vmax;
-  border-radius: 1vw;
-  margin-bottom: 1vmin;
+  width: 100%;
+  border-radius: 0.5vw;
+  margin-top: 1.2vmax;
+  margin-bottom: 2.5vmax;
   object-fit: cover;
 }
 
 .imagecontainer {
   flex-basis: auto;
   padding-inline: 4vmin;
-  padding-block-start: 2vmin;
   display: flex;
   flex-direction: column-reverse;
 }
