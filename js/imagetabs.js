@@ -9,7 +9,7 @@ const getImageDimensions = (url) => {
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.onload = () => resolve([url, img.width * img.height]);
-    img.onerror = (error) => reject(error);
+    img.onerror = () => resolve(url, 0);
     img.src = url;
   });
 };
@@ -70,12 +70,12 @@ async function geticon(elem, url, www = 1) {
             }
           })
           .catch((error) => {
-            console.log(error);
+            // console.log(error);
           });
       }
     });
   } catch {
-    console.log("error");
+    // console.log("error");
     geticon(elem, url);
     return;
   }
