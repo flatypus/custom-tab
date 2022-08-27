@@ -28,8 +28,8 @@ async function getLargest(elem, url, icons) {
 
 function setDefault(elem, url) {
   // console.log("grabbing default because data.icons.length == 0");
-  elem.src = "./js/customicons/default.png";
-  chrome.storage.local.set({ [url]: "./js/customicons/default.png" });
+  elem.src = "./customicons/default.png";
+  chrome.storage.local.set({ [url]: "./customicons/default.png" });
 }
 
 async function geticon(elem, url, www = 1) {

@@ -20,6 +20,6 @@ This is meant to be a chrome extension, so open the extensions page on your brow
 | *Custom search feature* |
 
 ## Common problems:
+-If images aren't loading immediately on the first page load, that's normal. The code needs to fetch from an api that may fail sometimes, so wait until it loads. The code will cache the favicon link so it loads much faster next time.
 -If the favicon grabber returns a low res or inaccurate image, you can override it in the customicon section at the bottom of the config.js. Provide the name of the website that matches the same name in the link list, and a path to the image.
-
 <br>Kinda inspired by [vincent's start page](https://github.com/vincor-qc/new-startpage) btw<br>
