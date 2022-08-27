@@ -2,9 +2,8 @@
 
 ## How to use:
 First, click the green 'Code' button, download as zip, then unpack, or run <br>
-`git clone https://github.com/flatypus/newtab`. 
-This is meant to be a chrome extension, so open chrome extensions in developer mode, click load unpacked, and select this folder.
-Then, duplicate the default.config.js file, name it config.js, and edit it to suit your needs.
+`git clone https://github.com/flatypus/newtab`. <br>
+This is meant to be a chrome extension, so open the extensions page on your browser, and tick the 'developer mode' button on the top right. Then, click 'load unpacked' button on the top left, and select this folder. Then, duplicate the default.config.js file, rename it to config.js, and edit it to suit your needs.
 
 ## Features
 <ol>
