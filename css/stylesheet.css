@@ -22,8 +22,8 @@
 #sideflexitem {
   flex-basis: auto;
   background-color: #0000004b;
-  padding-inline: 40px;
-  padding-block: 30px;
+  padding-inline: 3vw;
+  padding-block: 2vw;
   border-radius: 2vw;
 }
 
@@ -36,7 +36,7 @@
 }
 
 #quotebox {
-  font-size: 40px;
+  font-size: 2vw;
   color: rgb(131, 131, 131);
   inline-size: 25vw;
   overflow-wrap: break-word;
@@ -86,15 +86,17 @@
 }
 
 .imagenode {
-  width: 100%;
-  max-height: 100px;
+  width: 12vmin;
+  height: 5vmax;
+  border-radius: 1vw;
+  margin-bottom: 1vmin;
   object-fit: cover;
 }
 
 .imagecontainer {
   flex-basis: auto;
-  padding-inline: 30px;
-  padding-block-start: 20px;
+  padding-inline: 4vmin;
+  padding-block-start: 2vmin;
   display: flex;
   flex-direction: column-reverse;
 }
@@ -103,14 +105,13 @@
 .dropbtn {
   background-color: #ffffff00;
   color: #ffffff8e;
-  font-size: 24px;
+  font-size: 25px;
   width: 100%;
   border: none;
 }
 
 .dropdown {
   position: relative;
-  flex-basis: auto;
   margin-right: 20px;
   height: 30px;
 }
