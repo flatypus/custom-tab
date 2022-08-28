@@ -20,6 +20,7 @@
 }
 
 #sideflexitem {
+  white-space: nowrap;
   flex-basis: auto;
   background-color: #0000004b;
   padding-inline: 3vw;
@@ -33,6 +34,15 @@
   padding-inline: 40px;
   padding-block: 30px;
   display: block;
+  margin-block-end: 40px;
+}
+#todocontainer {
+  background-color: #0000004b;
+  border-radius: 2vw;
+  padding-inline: 40px;
+  padding-block: 30px;
+  display: block;
+  margin-block-end: 40px;
 }
 
 #quotebox {
@@ -83,7 +93,7 @@
   text-align: center;
   text-decoration: none;
   color: #e7e7e7d7;
-  padding-block:0.3vmax;
+  padding-block: 0.3vmax;
 }
 
 .imagenode {
@@ -151,4 +161,34 @@
   outline: none;
   font-size: 24px;
   color: rgb(138, 138, 138);
+}
+
+#todo {
+  width: 100%;
+  height: 400px;
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  color: rgb(131, 131, 131);
+  font-size: 32px;
+  font-family: Arial;
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: #424242;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a1a1a1;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #7b7b7b;
 }

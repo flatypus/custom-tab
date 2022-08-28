@@ -1,6 +1,6 @@
 function gettime() {
   var d = new Date();
-  return d.toLocaleTimeString();
+  return d.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
 }
 
 function getdate() {

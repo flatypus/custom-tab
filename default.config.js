@@ -66,4 +66,13 @@ config = {
     twitch: "./customicons/twitch.png",
     studio: "./customicons/studio.png",
   },
+
+  // decides if quote box is shown
+  showquote: false,
+
+  // decides if todo list is shown
+  showtodolist: true,
+  
+  // decides todo box size
+  todoboxsize: "435px",
 };
