@@ -12,7 +12,7 @@ const addBullets = (e) => {
 };
 
 chrome.storage.local.get("todo", (e) => {
-  if (e.todo == "") {
+  if (typeof(e.todo) == 'undefined' || e.todo == "") {
     input.value = "• ";
   } else {
     input.value = e.todo;

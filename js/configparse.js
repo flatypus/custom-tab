@@ -7,7 +7,7 @@ if (
   document.getElementById("quotecontainer").style.display = "none";
 }
 
-if (config.todolist == false) {
+if (config.showtodolist == false) {
   document.getElementById("todocontainer").style.display = "none";
 } else {
   document.getElementById("todocontainer").style.height = config.todoboxsize;
