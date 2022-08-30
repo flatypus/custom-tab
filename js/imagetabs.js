@@ -2,8 +2,12 @@ function toBaseURL(fullURL) {
   return fullURL.replace(/(http(s)?:\/\/)|(\/.*){1}/g, "");
 }
 
-function removeHttps(url) {
-  return url.replace(/^https?:\/\//i, "");
+function urlify(url) {
+  if (url.includes("://")) {
+    return url;
+  } else {
+    return "https://" + url;
+  }
 }
 const getImageDimensions = (url) => {
   return new Promise((resolve, reject) => {
@@ -91,7 +95,7 @@ for (var element in config.links) {
   var imagenode = document.createElement("img");
   // style container
   container.className = "container";
-  container.href = "https://" + removeHttps(config.links[element]);
+  container.href = urlify(config.links[element]);
   // style textbox
   textnode.innerText = element;
   textnode.className = "textnode";
